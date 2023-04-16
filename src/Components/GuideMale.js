@@ -1,9 +1,9 @@
 import React from 'react'
 import '../Styles/GuideCard.css'
 
-function GuideFemale() {
+function GuideMale() {
   return (
-    <div className='GuideFemale'>
+    <div className='GuideMale'>
         <div className='right-side'>
 				{/* <Header /> */}
 				<h2 className='main-header'>Guide</h2>
@@ -94,4 +94,4 @@ function GuideFemale() {
   )
 }
 
-export default GuideFemale
+export default GuideMale
