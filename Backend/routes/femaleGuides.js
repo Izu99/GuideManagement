@@ -99,4 +99,18 @@ router.route('/edit/:id').get(function (req,res){
 });
 
 
+router.route('/:id').get(function (req, res){
+    let email = req.params.id;
+   
+    femaleGuide.findOne({email : email},function (err,std){
+       if(err)
+            console.log(err);
+      else{
+            res.json(std)
+      }
+   });
+
+});
+
+
 module.exports = router;

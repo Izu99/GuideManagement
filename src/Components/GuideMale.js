@@ -62,12 +62,14 @@ export default class GuideMale extends Component {
 					<div style={{display: 'flex', alignItems: 'center'}}>
 						<div style={{display: 'flex'}}>
 							{[...Array(1)].map((_, i) => (
-								<img key={i} src="https://via.placeholder.com/50" alt="avatar" style={{width: 150, height: 150, borderRadius: '50%', marginRight: -10}} />
+								<img key={i} src="https://via.placeholder.com/50"  alt="avatar" style={{width: 150, height: 150, borderRadius: '50%', marginRight: -10}} />
+								
 							))}
 						</div>
 						<div style={{marginLeft: 10}}>
 							<div>{object.fullName}</div> 
 							<div>{object.location}</div>
+							<button type='submit'><a href='/guidefemale'> Female Guides </a></button>
 						</div>
 					</div>
 				</td>

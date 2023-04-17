@@ -2,17 +2,40 @@ import React, { useState, Component } from "react";
 import "../Styles/Profile.css";
 import RatingStar from "./Rating";
 import { withRouter, NavLink } from "react-router-dom"
+import axios from "axios";
+import GuideTableThrow from "./GuideTableThrow";
 
 
 
 export default class ProfileMale extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = { mguide: [] };
+		this.state.Email = this.props.match.params.id;
+
+		
+	}
+
+	componentDidMount() {
+		//  alert('Username is ' +this.props.match.params.id);
+		axios
+			.get("http://localhost:8090/guide/" + this.props.match.params.id)
+			.then((response) => {
+			
+				this.setState({ mguide: response.data });
+			})
+			.catch(function (error) {
+				console.log(error);
+				
+			});
+	}
+	tabRow() {
+		// eslint-disable-next-line react/jsx-no-undef
+		return <GuideTableThrow obj={this.state.mguide} />;
+	}
+
     render() {
-	// const [rating, setRating] = useState();
-
-	// const handleRatingSelect = (rating) => {
-	// 	setRating(rating);
-	// };
-
 	return (
 		<div className='ProfileMale'>
 			<nav>
@@ -60,9 +83,13 @@ export default class ProfileMale extends Component {
 				<button type='submit'>Contact Me</button>
 			</div>
 			<table>
+
+
+
+
 				<tr>
 					<td>
-						<h2>Amila Tharanga</h2>
+					<h2> {this.tabRow('fullName')}</h2>
 					</td>
 				</tr>
 				<tr>
@@ -71,25 +98,29 @@ export default class ProfileMale extends Component {
 					</td>
 				</tr>
 				<tr>
-					<td>Location</td>
+					<td>{this.tabRow('fullName')}</td>
 				</tr>
 				<tr>
-					<td>Languages</td>
+				<td>{this.tabRow('location')}</td>
 				</tr>
 				<tr>
-					<td>Verification</td>
+				<td>{this.tabRow('languages')}</td>
 				</tr>
+				
 				<tr>
-					<td>Response time</td>
+					<td>
+					{this.tabRow('description')}
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+					{this.tabRow('contactNo')}
+					</td>
 				</tr>
 				<tr>
 					<td>
-						<div className='description'>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis
-							saepe, provident voluptatum quia, repellat enim distinctio eaque
-							rerum aspernatur, quasi excepturi voluptate praesentium a
-							recusandae molestias autem illum consequatur sunt.
-						</div>
+					{this.tabRow('Email')}
 					</td>
 				</tr>
 			</table>
