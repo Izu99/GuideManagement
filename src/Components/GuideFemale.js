@@ -61,6 +61,7 @@ export default class GuideFemale extends Component {
 								<div style={{ marginLeft: 10 }}>
 									<div>{object.fullName}</div>
 									<div>{object.location}</div>
+									<button type='submit'><a href='/guidefemale'> View Profile </a></button>
 								</div>
 							</div>
 						</td>
@@ -113,10 +114,8 @@ export default class GuideFemale extends Component {
 				<div>
 					{" "}
 					<div className='buttons'>
-						<button type='submit'>Print</button>
-						<button type='submit'>
-							<a href='/guideregister'></a> Add Guide
-						</button>
+					<button type='submit'><a href='/FemaleTableView'> Print </a></button>
+					<button type='submit'><a href='/FemaleGuideRegister'> Add Guide </a></button>
 					</div>
 					<table className='table'>
 						<tbody style={{ padding: 20, textAlign: "center" }}>
