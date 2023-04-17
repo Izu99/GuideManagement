@@ -51,7 +51,7 @@ export default class GuideMale extends Component {
 							<td className='user'>
 								<div className='guidecard'>
 									<img
-										src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+										src='https://4.bp.blogspot.com/-fp4_6CFVnG4/WIv8aTFUjSI/AAAAAAAAcHI/IeHsPlwnEHE5UxT8QQuD-aIAxYNuP-bbACLcB/s1600/01.jpg'
 										alt=''
 									/>
 									<div className='details'>
@@ -63,7 +63,7 @@ export default class GuideMale extends Component {
 							<td className='user'>
 								<div className='guidecard'>
 									<img
-										src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+										src='https://4.bp.blogspot.com/-fp4_6CFVnG4/WIv8aTFUjSI/AAAAAAAAcHI/IeHsPlwnEHE5UxT8QQuD-aIAxYNuP-bbACLcB/s1600/01.jpg'
 										alt=''
 									/>
 									<div className='details'>
@@ -75,7 +75,7 @@ export default class GuideMale extends Component {
 							<td className='user'>
 								<div className='guidecard'>
 									<img
-										src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+										src='https://4.bp.blogspot.com/-fp4_6CFVnG4/WIv8aTFUjSI/AAAAAAAAcHI/IeHsPlwnEHE5UxT8QQuD-aIAxYNuP-bbACLcB/s1600/01.jpg'
 										alt=''
 									/>
 									<div className='details'>
@@ -89,7 +89,7 @@ export default class GuideMale extends Component {
 							<td className='user'>
 								<div className='guidecard'>
 									<img
-										src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+										src='https://4.bp.blogspot.com/-fp4_6CFVnG4/WIv8aTFUjSI/AAAAAAAAcHI/IeHsPlwnEHE5UxT8QQuD-aIAxYNuP-bbACLcB/s1600/01.jpg'
 										alt=''
 									/>
 									<div className='details'>
@@ -102,7 +102,7 @@ export default class GuideMale extends Component {
 							<td className='user'>
 								<div className='guidecard'>
 									<img
-										src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+										src='https://4.bp.blogspot.com/-fp4_6CFVnG4/WIv8aTFUjSI/AAAAAAAAcHI/IeHsPlwnEHE5UxT8QQuD-aIAxYNuP-bbACLcB/s1600/01.jpg'
 										alt=''
 									/>
 									<div className='details'>
@@ -115,7 +115,7 @@ export default class GuideMale extends Component {
 							<td className='user'>
 								<div className='guidecard'>
 									<img
-										src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+										src='https://4.bp.blogspot.com/-fp4_6CFVnG4/WIv8aTFUjSI/AAAAAAAAcHI/IeHsPlwnEHE5UxT8QQuD-aIAxYNuP-bbACLcB/s1600/01.jpg'
 										alt=''
 									/>
 									<div className='details'>

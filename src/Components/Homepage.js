@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {Component} from 'react'
+import '../Styles/HomePage.css'
 
-function HomePage() {
+export default class HomePage extends Component {
+  render() {
   return (
-    <div>HomePage</div>
+    <div className='homepage-Image'>
+      <h2>Find Your Tour Guide</h2>
+      <button type='submit'>Male Guides</button>
+      <button type='submit'>Female Guides</button>
+    </div>
   )
 }
-
-export default HomePage
+}
