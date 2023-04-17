@@ -5,7 +5,8 @@ function Report() {
 	return (
 		<div className='Report'>
             <div className="header-image">
-
+                <h2>#Visit Sri Lanka</h2>
+                <p>Report</p>
             </div>
             <button>Report</button>
 			<table>

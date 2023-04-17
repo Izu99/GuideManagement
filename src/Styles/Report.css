@@ -1,14 +1,14 @@
 .Report {
 	width: 100%;
     height: 100vh;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
 }
 
 .Report .header-image {
     width: 100%;
     height: 20rem;
     /* object-fit: cover; */
-    background-image: url("https://i.pinimg.com/originals/a2/d1/19/a2d11980792938c9b2e38e1befe1c518.jpg");
+    background-image: url("https://images.pexels.com/photos/279707/pexels-photo-279707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -20,9 +20,22 @@
 	/* min-height: 100vh; */
 }
 
+.Report .header-image h2 {
+    margin: 0;
+    padding-left: 2%;
+    color: #ffffff;
+}
+
+.Report .header-image p {
+    padding: 10% 40%;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 550;
+}
+
 .Report button {
+    margin-left: 90%;
     margin-top: 2%;
-    margin-left: 80%;
     background-color: #3594CC;
     color: #ffffff;
     width: 8rem;
