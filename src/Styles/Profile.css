@@ -1,8 +1,12 @@
 .ProfileFemale, .ProfileMale {
     width: 100%;
     display: flex;
-    margin-left: 12rem;
-    margin-top: 2rem;
+}
+
+.ProfileFemale table, .ProfileMale table {
+    margin-top: 8.5rem;
+    width: 80%;    
+    margin-left: 4rem;
 }
 
 .ProfileFemale .profile-image, .ProfileMale .profile-image {
@@ -14,7 +18,7 @@
     height: 12rem;
     border-radius: 50%;
     object-fit: cover;
-    margin: 5rem;
+    margin: 10rem 8rem 8rem 16rem;
 }
 
 
@@ -25,9 +29,9 @@
 
 .ProfileFemale .ratingStar p, .ProfileMale .ratingStar p {
     position: relative;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: gold;
-    margin-left: 8%;
+    /* margin-left: 8%; */
     top: 2rem;
     width: 100%;
 }
@@ -38,15 +42,22 @@
     width: 7rem;
     height: 2rem;
     position: absolute;
-    top: 22rem;
-    left: 19rem;
+    top: 25rem;
+    left: 18rem;
     color: #28471C;
     border: 1px solid #28471C;
     background-color: #ffffff;
     border-radius: 15px;
+    transition: 0.3s ease all;
 }
 
 .ProfileFemale .description, .ProfileMale .description {
     margin-top: 2%;
     width: 60%;
+}
+
+.ProfileFemale button:hover, .ProfileMale button:hover {
+    color: #ffffff;
+    background-color: #28471C;
+
 }
