@@ -16,7 +16,6 @@ import EditGuide from "./Components/EditGuide";
 // import HomePage from "./Components/HomePage";
 
 import "./App.css";
-import HomePage from "./Components/Homepage";
 
 class App extends Component {
 	render() {
