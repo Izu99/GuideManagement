@@ -10,7 +10,7 @@ class GtableRow extends Component {
         this.delete = this.delete.bind(this);
     }
     delete(){
-        axios.get('http://localhost:4000/guide/delete/'+this.props.obj._id)
+        axios.get('http://localhost:8090/guide/delete/'+this.props.obj._id)
             .then(this.setState({redirect: true}))
             .catch(err => console.log(err))
         //this.props.history.push('/index');

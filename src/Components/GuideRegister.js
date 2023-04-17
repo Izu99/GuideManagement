@@ -79,7 +79,7 @@ export default class GuideRegister extends Component {
 
                     if(this.state.contactNo.length === 10){
                       
-                            axios.post('http://localhost:4000/guide/add',obj)
+                            axios.post('http://localhost:8090/guide/add',obj)
                                 .then(res => {
                                     alert("add Successfully");
                                     this.setState({
@@ -95,7 +95,7 @@ export default class GuideRegister extends Component {
                                     console.log(res.data)});
                             this.props.history.push('/HomePage');
                       
-					  window.location.replace('/HomePage');
+					//   window.location.replace('/HomePage');
                         
                     } 
                     else {
@@ -115,25 +115,25 @@ export default class GuideRegister extends Component {
 					<div className='form-row name'>
 						<div className='form-group'>
 							<p className="form-control">Guide's Full Name</p>
-							{/* <label htmlFor="firstName">First Name</label> */}
+						
 							<input
 								type='text'
 								className='form-control'
 								id='name'
-								//   placeholder="Enter your first name"
+								
 								required
 								   value={this.state.fullName}
 								   onChange={this.onChangefullName}
 							/>
 						</div>
 						<div className='form-group'>
-							{/* <label htmlFor="lastName">Last Name</label> */}
+						
 							<p className="form-control">Location</p>
 							<input
 								type='text'
 								className='form-control'
 								id='location'
-								//   placeholder="Enter your last name"
+								
 								required
 								  value={this.state.location}
 								   onChange={this.onChangelocation}
@@ -154,7 +154,7 @@ export default class GuideRegister extends Component {
 						</div>
 					 
 						<div className='form-group'>
-							{/* <label htmlFor="lastName">Last Name</label> */}
+							
 							<p className="form-control">A brief Description about himself/herself</p>
 							<textarea
 								className='form-control'
@@ -191,17 +191,8 @@ export default class GuideRegister extends Component {
 						</div>
 
 					</div>
-					{/* <div className='form-row conditions'>
-						<div className='form-group'>
-							<input type='checkbox' name='agree' id='agree' required/>
-							<p className="form-control">
-								I agree to all <a href='http://'>conditions.</a>
-							</p>
-						</div>
-					</div> */}
-					<button type='submit'>
-						<Link to='/homepage'>add</Link>
-					</button>
+				
+					<button variant ="contained" type ="submit">Add </button>
 				</form>
 			</div>
 		);
