@@ -1,0 +1,48 @@
+.GuideRegister {
+	/* height: 100%; */
+	/* padding-bottom: 6rem; */
+	/* min-height: 100vh; */
+	/* position: relative; */
+}
+
+.GuideRegister form {
+    margin-left: 20rem;
+}
+
+.GuideRegister .form-control {
+    display: inline-block;
+    margin-bottom: 2%;
+}
+
+
+.GuideRegister input,
+.GuideRegister select,
+.GuideRegister textarea{
+	padding: 10px;
+	border-radius: 5px;
+	width: 11.75rem;
+	max-width: 300px;
+	border: 1px solid #000000;
+	font-size: 14px;
+	background-color: #ffffff;
+    position: absolute;
+    left: 40rem;
+}
+
+.GuideRegister button[type="submit"] {
+	margin-top: 25px;
+	padding: 10px 20px;
+	background-color: #df880e;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s ease;
+	width: 225px;
+	margin-left: 198px;
+	margin-bottom: 75px;
+}
+
+.GuideRegister button[type="submit"]:hover {
+	background-color: #c5790e;
+}
