@@ -22,14 +22,24 @@
 }
 
 .homepage-Image .buttons {
-    justify-content: space-between;
-    width: 60rem;
-    background-color: #ffffff;
+    /* justify-content: space-between; */
+    width: 80rem;
+    /* background-color: #ffffff; */
+	display: flex;
 }
 
 .homepage-Image button {
-    margin-left: 18rem;
-    width: 5rem;
+    margin-left: 16rem;
+    width: 16rem;
+	height: 2.5rem;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 30px;
+	transition: 0.3 ease all;
+}
+
+.homepage-Image button:hover {
+	background-color: #f3efef;
 }
 
 
