@@ -1,32 +1,32 @@
 .GuideRegister {
-	/* height: 100%; */
-	/* padding-bottom: 6rem; */
+	height: 100%;
+	padding-bottom: 6rem;
 	/* min-height: 100vh; */
 	/* position: relative; */
 }
 
 .GuideRegister form {
-    margin-left: 20rem;
+	margin-top: 10%;
+	margin-left: 20rem;
 }
 
 .GuideRegister .form-control {
-    display: inline-block;
-    margin-bottom: 2%;
+	display: inline-block;
+	margin-bottom: 2%;
 }
-
 
 .GuideRegister input,
 .GuideRegister select,
-.GuideRegister textarea{
+.GuideRegister textarea {
 	padding: 10px;
 	border-radius: 5px;
-	width: 11.75rem;
+	width: 12.75rem;
 	max-width: 300px;
 	border: 1px solid #000000;
 	font-size: 14px;
 	background-color: #ffffff;
-    position: absolute;
-    left: 40rem;
+	position: absolute;
+	left: 40rem;
 }
 
 .GuideRegister button[type="submit"] {

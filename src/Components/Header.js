@@ -5,11 +5,10 @@ import { withRouter, NavLink } from "react-router-dom";
 export default class NavigationBar extends Component {
 	render() {
 		return (
-			<nav>			
+			<nav>
 				<ul className='nav-links'>
-					
 					<li>
-						<NavLink exact to='/home' activeClassName='active'>
+						<NavLink exact to='/homepage' activeClassName='active'>
 							Home
 						</NavLink>
 					</li>
