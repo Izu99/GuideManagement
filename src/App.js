@@ -11,8 +11,11 @@ import NavigationBar from "./Components/Header";
 import GuideRegister from "./Components/GuideRegister";
 import FemaleGuideRegister from "./Components/FemaleGuideRegister";
 import GuideTableView from "./Components/GuideTableView";
+import FemaleTableView from "./Components/FemaleTableView";
 import EditFguide from "./Components/EditFguide";
 import EditGuide from "./Components/EditGuide";
+import ProfileFemale from "./Components/ProfileFemale";
+import ProfileMale from "./Components/ProfileMale";
 // import HomePage from "./Components/HomePage";
 
 import "./App.css";
@@ -30,9 +33,12 @@ class App extends Component {
 						<Route path='/navbar' component={NavigationBar} />
 						<Route path='/guideregister' component={GuideRegister} />
 						<Route path='/FemaleGuideRegister' component={FemaleGuideRegister} />
+						<Route path='/FemaleTableView' component={FemaleTableView} />
 						<Route path='/GuideTableView' component={GuideTableView} />
 						<Route path='/EditFguide/:id' component={EditFguide} />
 						<Route path='/EditGuide/:id' component={EditGuide} />
+						<Route path='/ProfileFemale' component={ProfileFemale} />
+						<Route path='/ProfileMale' component={ProfileMale} />
 						<Redirect to={HomePage} />
 					</Switch>
 				</Router>

@@ -17,6 +17,29 @@
 .homepage-Image h2 {
     margin: 0;
     padding: 10rem;
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+.homepage-Image .buttons {
+    /* justify-content: space-between; */
+    width: 80rem;
+    /* background-color: #ffffff; */
+	display: flex;
+}
+
+.homepage-Image button {
+    margin-left: 16rem;
+    width: 16rem;
+	height: 2.5rem;
+	background-color: #ffffff;
+	border: none;
+	border-radius: 30px;
+	transition: 0.3 ease all;
+}
+
+.homepage-Image button:hover {
+	background-color: #f3efef;
 }
 
 

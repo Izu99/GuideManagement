@@ -4,6 +4,7 @@ import axios from "axios";
 import "../Styles/guide.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import GuideTableThrow from "./GuideTableThrow";
+import {NavLink } from "react-router-dom";
 import jsPDF from "jspdf";
 import 'jspdf-autotable';
 
@@ -72,7 +73,46 @@ export default class Guide extends Component {
 
 	render() {
 		return (
-			<div className='adminVehicleProfile'>
+			<div className='GuideTableView'>
+			<nav>			
+				<ul className='nav-links'>
+					
+					<li>
+						<NavLink exact to='/home' activeClassName='active'>
+							Home
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact to='/explore' activeClassName='active'>
+							Explore
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact to='/blog' activeClassName='active'>
+							Blog
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact to='/hotel' activeClassName='active'>
+							Hotel
+						</NavLink>
+					</li>
+
+					<li>
+						<NavLink exact to='/guide' activeClassName='active'>
+							Guide
+						</NavLink>
+					</li>
+				</ul>
+				<div className='profile'>
+					<NavLink to={`/index/${this.props.match.params.id}`}></NavLink>
+					<i className='fa-solid fa-ellipsis-vertical'></i>
+				</div>
+			</nav>
+			<div className="header-image">
+                <h2>#Visit Sri Lanka</h2>
+                <p>Report</p>
+            </div>
 				
 				<br /> <h3 align='center'>Guide Management</h3>
 				<div className='row-frm'>

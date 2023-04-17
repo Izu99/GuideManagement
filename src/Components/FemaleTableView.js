@@ -3,9 +3,11 @@ import React, { Component } from "react";
 import axios from "axios";
 import "../Styles/guide.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import GuideTableThrow from "./GuideTableThrow";
+import FemaleTableTrow from "./FemaleTableTrow";
+import jsPDF from "jspdf";
+import 'jspdf-autotable';
 
-export default class Guide extends Component {
+export default class FGuide extends Component {
 	constructor(props) {
 		super(props);
 		this.state = { guide: [], search: "" };
@@ -23,7 +25,7 @@ export default class Guide extends Component {
 	componentDidMount() {
 		// alert('email is ' +this.props.match.params.id);
 		axios
-			.get("http://localhost:4000/femaleGuide/getall/")
+			.get("http://localhost:8090/femaleGuide/getall/")
 			.then((response) => {
 				// alert('Pass una')
 				// alert('Data Tika :'+response.data)
@@ -36,18 +38,44 @@ export default class Guide extends Component {
 
 	tabRow() {
 		return this.state.guide.map(function (object, i) {
-			return <GuideTableThrow obj={object} key={i} />;
+			return <FemaleTableTrow obj={object} key={i} />;
 		});
 		
 	}
+
+	exportPDF = () => {
+        const unit = "pt";
+        const size = "A4"; // Use A1, A2, A3 or A4
+        const orientation = "portrait"; // portrait or landscape
+    
+        const marginLeft = 40;
+        const doc = new jsPDF(orientation, unit, size);
+    
+        doc.setFontSize(15);
+    
+        const title = "My All Repaire Report";
+        const headers = [["fullName", "location","languages", "description","contactNo", "Email"]];
+    
+        const data = this.state.guide.map(elt=> [elt.fullName, elt.location,  elt.languages,elt.description, elt.contactNo, elt.Email]);
+    
+        let content = {
+          startY: 50,
+          head: headers,
+          body: data
+        };
+    
+        doc.text(title, marginLeft, 40);
+        doc.autoTable(content);
+        doc.save("report.pdf")
+      }
 
 	render() {
 		return (
 			<div className='adminVehicleProfile'>
 				
-				<br /> <h3 align='center'>Guide Management</h3>
+				<br /> <h3 align='center'>Female Guide Management</h3>
 				<div className='row-frm'>
-				<button><Link to={"/AddVehicle"} className="btn btn-success">Add Vehicle</Link></button>
+
 					<table className='table table-striped' style={{ marginTop: 20 }}>
 						<thead>
 							<tr>
@@ -63,6 +91,9 @@ export default class Guide extends Component {
 						</thead>
 						<tbody>{this.tabRow()}</tbody>
 					</table>
+					<center>
+                        <button onClick={() => this.exportPDF()}style={{background:'blue',padding:10, color:'white', border:'none',borderRadius:'20'}}>- Export All -</button>
+                    </center>
 				</div>
 				<br />
 				<br />

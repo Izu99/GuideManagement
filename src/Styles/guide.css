@@ -1,61 +1,88 @@
-.adminVehicleProfile {
+.GuideTableView {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	padding-top: 4rem;
+	/* padding-top: 4rem; */
 	padding-bottom: 4rem;
 	min-height: 100vh;
 	position: relative;
 	background-color: #aaacac33;
 }
+.GuideTableView .header-image {
+	width: 100%;
+	height: 20rem;
+	/* object-fit: cover; */
+	background-image: url("https://images.pexels.com/photos/279707/pexels-photo-279707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: rgba(0, 0, 0, 0.171);
+	background-blend-mode: overlay;
+	width: 100%;
+	/* height: 100%; */
+	padding-bottom: 6rem;
+	/* min-height: 100vh; */
+}
 
-.adminVehicleProfile h3 {
+.GuideTableView .header-image h2 {
+    margin: 0;
+    padding-left: 2%;
+    color: #ffffff;
+}
+
+.GuideTableView .header-image p {
+    padding: 10% 40%;
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 550;
+}
+.GuideTableView h3 {
 	font-size: 1.6rem;
 }
 
-.adminVehicleProfile table {
+.GuideTableView table {
 	border-collapse: collapse;
 	width: 95%;
 	max-width: 100%;
 	margin: 1.5rem auto;
 }
 
-.adminVehicleProfile thead {
+.GuideTableView thead {
 	background-color: #00b0d9;
 	color: #fff;
 }
 
-.adminVehicleProfile th,
-.adminVehicleProfile td {
+.GuideTableView th,
+.GuideTableView td {
 	padding: 12px;
 	text-align: left;
 	border-bottom: 1px solid #ddd;
 }
 
-.adminVehicleProfile td {
+.GuideTableView td {
 	font-weight: 450;
 	font-size: 1.2rem;
 	color: #252525;
 }
 
 
-.adminVehicleProfile .actions {
+.GuideTableView .actions {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 8px;
 }
 
-.adminVehicleProfile td.profile-actions {
+.GuideTableView td.profile-actions {
 	display: flex;
 	align-items: center;
 	/* margin-top: 20px; */
 	/* margin-left: 6%; */
 }
 
-.adminVehicleProfile  td.profile-actions button {
+.GuideTableView  td.profile-actions button {
 	vertical-align: center;
 	padding: 0.75rem;
 	border: none;
@@ -68,24 +95,24 @@
 	font-size: 0.85rem;
 }
 
-.adminVehicleProfile td.profile-actions button:nth-child(1) {
+.GuideTableView td.profile-actions button:nth-child(1) {
 	background-color: #0eb424;
 	/* width: 6.4rem; */
 }
 
-.adminVehicleProfile td.profile-actions button:nth-child(1):hover {
+.GuideTableView td.profile-actions button:nth-child(1):hover {
 	background-color: #068d18;
 }
 
-.adminVehicleProfile .profile-actions button:hover {
+.GuideTableView .profile-actions button:hover {
 	background-color: #c9302c;
 }
 
-.adminVehicleProfile .profile-actions td:nth-child(2) {
+.GuideTableView .profile-actions td:nth-child(2) {
 	/* margin-left: 35%; */
 }
 
-.adminVehicleProfile .profile-actions button a {
+.GuideTableView .profile-actions button a {
 	text-decoration: none;
 	color: #ffffff;
 }
