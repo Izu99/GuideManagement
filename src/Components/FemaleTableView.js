@@ -4,8 +4,8 @@ import axios from "axios";
 import "../Styles/guide.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import FemaleTableTrow from "./FemaleTableTrow";
-import jsPDF from "jspdf";
-import 'jspdf-autotable';
+// import jsPDF from "jspdf";
+// import 'jspdf-autotable';
 
 export default class FGuide extends Component {
 	constructor(props) {
@@ -49,7 +49,7 @@ export default class FGuide extends Component {
         const orientation = "portrait"; // portrait or landscape
     
         const marginLeft = 40;
-        const doc = new jsPDF(orientation, unit, size);
+        const doc = new (orientation, unit, size);
     
         doc.setFontSize(15);
     

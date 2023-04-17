@@ -18,7 +18,7 @@ export default class ProfileFemale extends Component {
 				<nav>
 					<ul className='nav-links'>
 						<li>
-							<NavLink exact to='/home' activeClassName='active'>
+							<NavLink exact to='/homepage' activeClassName='active'>
 								Home
 							</NavLink>
 						</li>
