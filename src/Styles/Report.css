@@ -1,0 +1,21 @@
+.Report {
+	width: 100%;
+}
+
+.Report table {
+	margin: 6% 2%;
+	/* border: 1px solid #000000; */
+	width: 95%;
+	border-collapse: collapse;
+}
+
+.Report table thead td {
+	font-size: 1.2rem;
+
+	text-decoration: underline;
+}
+
+.Report table td {
+	border: 1px solid #000000;
+	padding: 1%;
+}
