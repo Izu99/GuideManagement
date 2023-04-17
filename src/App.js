@@ -13,7 +13,7 @@ import FemaleGuideRegister from "./Components/FemaleGuideRegister";
 import GuideTableView from "./Components/GuideTableView";
 import EditFguide from "./Components/EditFguide";
 import EditGuide from "./Components/EditGuide";
-// import HomePage from "./Components/HomePage";
+import HomePage from "./Components/HomePage";
 
 import "./App.css";
 
