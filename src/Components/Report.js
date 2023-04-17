@@ -4,6 +4,10 @@ import "../Styles/Report.css";
 function Report() {
 	return (
 		<div className='Report'>
+            <div className="header-image">
+
+            </div>
+            <button>Report</button>
 			<table>
 				<thead>
 					<td>Name</td>
