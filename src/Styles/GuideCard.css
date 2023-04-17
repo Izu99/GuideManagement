@@ -1,44 +1,45 @@
-.GuideFemale .right-side table {
+.GuideFemale table, .GuideMale table {
     /* margin-top: 5%; */
-	width: 100%;
+	width: 80%;
     border-collapse: separate;
-    border-spacing: 6rem;
+    border-spacing: 40px;
+    margin-left: 10%;
 }
 
-.GuideFemale .right-side table .users {
+.GuideFemale table .users, .GuideMale table .users {
 
 }
 
-.GuideFemale .right-side .users .user {
-    height: 10rem;
+.GuideFemale .users .user, .GuideMale .users .user {
+    height: 22rem;
     /* border: 1px solid #000000; */
  border-radius: 15px;
     /* border: 1px solid #000000; */
-    width: 5%;
+    /* width: 4%; */
     box-shadow: 0px 0px 40px #cccccc;
 
 } 
-.GuideFemale .right-side .guidecard {
+.GuideFemale .guidecard, .GuideMale .guidecard  {
   
 }
 
-.GuideFemale .right-side .users .user img {
-	width: 8rem;
-	height: 8rem;
+.GuideFemale .users .user img, .GuideMale .users .user img  {
+	width: 10rem;
+	height: 10rem;
 	border-radius: 50%;
-	border: 1px solid #0000003b;
+	border: 1px solid #c9c6c63b;
 	padding: 0.6%;
     margin-left: 25%;
 }
 
-.GuideFemale .right-side .users .user .details {
+.GuideFemale .users .user .details, .GuideMale .users .user .details {
     margin-left: 22%;
 }
 
-.GuideFemale .right-side .users .user .details h2 {
+.GuideFemale .users .user .details h2, .GuideMale .users .user .details h2 {
     margin-left: 8%;
 }
 
-.GuideFemale .right-side .users .user .details p {
+.GuideFemale .users .user .details p, .GuideMale .users .user .details p {
     margin-left: 20%;
 }

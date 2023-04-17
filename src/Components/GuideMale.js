@@ -1,9 +1,47 @@
-import React from 'react'
+import React, {Component} from 'react'
 import '../Styles/GuideCard.css'
+import { withRouter, NavLink } from "react-router-dom";
+import '../Styles/Header.css'
 
-function GuideMale() {
+export default class GuideMale extends Component {
+    render() {
   return (
     <div className='GuideMale'>
+        <nav>			
+				<ul className='nav-links'>
+					
+					<li>
+						<NavLink exact to='/home' activeClassName='active'>
+							Home
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact to='/explore' activeClassName='active'>
+							Explore
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact to='/blog' activeClassName='active'>
+							Blog
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact to='/hotel' activeClassName='active'>
+							Hotel
+						</NavLink>
+					</li>
+
+					<li>
+						<NavLink exact to='/guide' activeClassName='active'>
+							Guide
+						</NavLink>
+					</li>
+				</ul>
+				<div className='profile'>
+					<NavLink to={`/index/${this.props.match.params.id}`}></NavLink>
+					<i className='fa-solid fa-ellipsis-vertical'></i>
+				</div>
+			</nav>
         <div className='right-side'>
 				{/* <Header /> */}
 				<h2 className='main-header'>Guide</h2>
@@ -91,7 +129,6 @@ function GuideMale() {
 				</table>
 			</div>
     </div>
-  )
+  );
 }
-
-export default GuideMale
+}

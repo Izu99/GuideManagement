@@ -1,82 +1,57 @@
-import React from 'react'
-import '../Styles/GuideCard.css'
+import React, {Component} from "react";
+import "../Styles/GuideCard.css";
+// import NavigationBar from "./Header";
+import {NavLink } from "react-router-dom";
+// import "../Styles/Header.css";
 
-function GuideFemale() {
-  return (
-    <div className='GuideFemale'>
-        <div className='right-side'>
-				{/* <Header /> */}
-				<h2 className='main-header'>Guide</h2>
+export default class GuideFemale extends Component {
+    render() {
+	return (
+		<div className='GuideFemale'>
+            <nav>			
+				<ul className='nav-links'>
+					
+					<li>
+						<NavLink exact to='/home' activeClassName='active'>
+							Home
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact to='/explore' activeClassName='active'>
+							Explore
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact to='/blog' activeClassName='active'>
+							Blog
+						</NavLink>
+					</li>
+					<li>
+						<NavLink exact to='/hotel' activeClassName='active'>
+							Hotel
+						</NavLink>
+					</li>
 
-				<table class='table table-striped'>
-					{" "}
-					<tr className='users'>
-						<td className='user'>
-                            <div className="guidecard">
-							<img
-								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
-								alt=''
-							/>
-							<div className='details'>
-								<h2>UserName</h2>
-								<p>city</p>
-							</div>
-                            </div>
-						</td>
-						<td className='user'>
-                            <div className="guidecard">
-							<img
-								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
-								alt=''
-							/>
-							<div className='details'>
-								<h2>UserName</h2>
-								<p>city</p>
-							</div>
-                            </div>
-						</td>
-						<td className='user'>
-                            <div className="guidecard">
-							<img
-								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
-								alt=''
-							/>
-							<div className='details'>
-								<h2>UserName</h2>
-								<p>city</p>
-							</div>
-                            </div>
-						</td>
-					</tr>
-					<tr className='users'>
-						<td className='user'>
-                            <div className="guidecard">
-							<img
-								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
-								alt=''
-							/>
-							<div className='details'>
-								<h2>UserName</h2>
-								<p>city</p>
-							</div>
-                            </div>
-						</td>
+					<li>
+						<NavLink exact to='/guide' activeClassName='active'>
+							Guide
+						</NavLink>
+					</li>
+				</ul>
+				<div className='profile'>
+					<NavLink to={`/index/${this.props.match.params.id}`}></NavLink>
+					<i className='fa-solid fa-ellipsis-vertical'></i>
+				</div>
+			</nav>
 
-						<td className='user'>
-                            <div className="guidecard">
-							<img
-								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
-								alt=''
-							/>
-							<div className='details'>
-								<h2>UserName</h2>
-								<p>city</p>
-							</div>
-                            </div>
-						</td>
+			{/* <NavigationBar /> */}
+			<h2 className='main-header'>Guide</h2>
 
-						<td className='user'>
-                            <div className="guidecard">
+			<table class='table table-striped'>
+				{" "}
+				<tr className='users'>
+					<td className='user'>
+						<div className='guidecard'>
 							<img
 								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
 								alt=''
@@ -85,13 +60,75 @@ function GuideFemale() {
 								<h2>UserName</h2>
 								<p>city</p>
 							</div>
-                            </div>
-						</td>
-					</tr>
-				</table>
-			</div>
-    </div>
-  )
+						</div>
+					</td>
+					<td className='user'>
+						<div className='guidecard'>
+							<img
+								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+								alt=''
+							/>
+							<div className='details'>
+								<h2>UserName</h2>
+								<p>city</p>
+							</div>
+						</div>
+					</td>
+					<td className='user'>
+						<div className='guidecard'>
+							<img
+								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+								alt=''
+							/>
+							<div className='details'>
+								<h2>UserName</h2>
+								<p>city</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr className='users'>
+					<td className='user'>
+						<div className='guidecard'>
+							<img
+								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+								alt=''
+							/>
+							<div className='details'>
+								<h2>UserName</h2>
+								<p>city</p>
+							</div>
+						</div>
+					</td>
+
+					<td className='user'>
+						<div className='guidecard'>
+							<img
+								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+								alt=''
+							/>
+							<div className='details'>
+								<h2>UserName</h2>
+								<p>city</p>
+							</div>
+						</div>
+					</td>
+
+					<td className='user'>
+						<div className='guidecard'>
+							<img
+								src='http://health5.ru/wp-content/uploads/2018/03/Rejuvenate-the-face.jpg'
+								alt=''
+							/>
+							<div className='details'>
+								<h2>UserName</h2>
+								<p>city</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	);
 }
-
-export default GuideFemale
+}
