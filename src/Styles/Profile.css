@@ -1,0 +1,52 @@
+.ProfileFemale, .ProfileMale {
+    width: 100%;
+    display: flex;
+    margin-left: 12rem;
+    margin-top: 2rem;
+}
+
+.ProfileFemale .profile-image, .ProfileMale .profile-image {
+    display: flex;
+}
+
+.ProfileFemale img, .ProfileMale img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 5rem;
+}
+
+
+.ProfileFemale h2, .ProfileMale h2 {
+    font-size: 2rem;
+    position: absolute;
+}
+
+.ProfileFemale .ratingStar p, .ProfileMale .ratingStar p {
+    position: relative;
+    font-size: 2rem;
+    color: gold;
+    margin-left: 8%;
+    top: 2rem;
+    width: 100%;
+}
+
+.ProfileFemale .ratingStar , .ProfileMale .ratingStar {}
+
+.ProfileFemale button, .ProfileMale button {
+    width: 7rem;
+    height: 2rem;
+    position: absolute;
+    top: 22rem;
+    left: 19rem;
+    color: #28471C;
+    border: 1px solid #28471C;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+.ProfileFemale .description, .ProfileMale .description {
+    margin-top: 2%;
+    width: 60%;
+}

@@ -9,6 +9,8 @@ import GuideFemale from "./Components/GuideFemale";
 import GuideMale from "./Components/GuideMale";
 import NavigationBar from "./Components/Header";
 import GuideRegister from "./Components/GuideRegister";
+import ProfileFemale from "./Components/ProfileFemale";
+import ProfileMale from "./Components/ProfileMale";
 
 import "./App.css";
 import HomePage from "./Components/HomePage";
@@ -24,6 +26,8 @@ class App extends Component {
 						<Route path='/guidemale' component={GuideMale} />
 						<Route path='/navbar' component={NavigationBar} />
 						<Route path='/guideregister' component={GuideRegister} />
+						<Route path='/profilefemale' component={ProfileFemale} />
+						<Route path='/profilemale' component={ProfileMale} />
 						<Redirect to={HomePage} />
 					</Switch>
 				</Router>
