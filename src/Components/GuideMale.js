@@ -60,7 +60,7 @@ export default class GuideMale extends Component {
 										<div>
 											<div>{object.fullName}</div>
 											<div>{object.location}</div>
-											<button type='submit'><a href='/GuideTableView'> profile </a></button>
+											<button type='submit'><a href='/ProfileMale'> profile </a></button>
 										</div>
 									</div>
 								</td>
