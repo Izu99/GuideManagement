@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../Styles/GuideCard.css";
 import { withRouter, NavLink } from "react-router-dom";
 import "../Styles/Header.css";
-import GuideTablecolum from "./GuideTablecolum";
 import axios from "axios";
 
 import _ from "lodash";
@@ -60,7 +59,12 @@ export default class GuideMale extends Component {
 										<div>
 											<div>{object.fullName}</div>
 											<div>{object.location}</div>
-											<button type='submit'><a href='/ProfileMale'> profile </a></button>
+											{/* <button type='submit'><a href='/ProfileMale'> profile </a></button> */}
+											<button type='submit'>
+						<a href={"/ProfileMale/" + this.props.match.params.id}>
+						profile{" "}
+						</a>
+					</button>
 										</div>
 									</div>
 								</td>

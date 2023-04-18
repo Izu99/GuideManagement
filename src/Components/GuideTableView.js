@@ -5,8 +5,8 @@ import "../Styles/guide.css";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import GuideTableThrow from "./GuideTableThrow";
 import { NavLink } from "react-router-dom";
-// import jsPDF from "jspdf";
-// import 'jspdf-autotable';
+ import jsPDF from "jspdf";
+ import 'jspdf-autotable';
 
 export default class Guide extends Component {
 	constructor(props) {
@@ -49,7 +49,7 @@ export default class Guide extends Component {
 		const orientation = "portrait"; // portrait or landscape
 
 		const marginLeft = 40;
-		const doc = new (orientation, unit, size)();
+		const doc = new jsPDF(orientation, unit, size);
 
 		doc.setFontSize(15);
 

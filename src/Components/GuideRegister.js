@@ -81,7 +81,8 @@ export default class GuideRegister extends Component {
 				});
 				console.log(res.data);
 			});
-			this.props.history.push("/HomePage");
+			this.props.history.push("/GuideTableView");
+			window.location.replace('/GuideTableView');
 
 			//   window.location.replace('/HomePage');
 		} else {

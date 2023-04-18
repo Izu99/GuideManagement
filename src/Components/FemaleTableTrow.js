@@ -41,9 +41,8 @@ class GtableRow extends Component {
                </td>
                <td className='profile-actions'>
 
-                   {/* <button><Link to={"/vehicleEdit/"+this.props.obj._id} className="btn btn-success">Edit</Link></button> */}
-                   {/* <br/><br/> */}  &nbsp;
-                   <button onClick={this.delete} className="btn btn-danger">Delete</button>
+                  &nbsp;
+                   {/* <button onClick={this.delete} className="btn btn-danger">Delete</button> */}
                </td>
            </tr>
         );

@@ -60,21 +60,35 @@ router.route("/update/:id").put(async(req,res)=>{
 })
 
 
-//deleting data from the database
-router.route("/delete/:id").delete(async(req,res)=>{
-    let guideId = req.params.id;
+// //deleting data from the database
+// router.route("/delete/:id").delete(async(req,res)=>{
+//     let guideId = req.params.id;
 
   
 
-    await guide.findByIdAndDelete(guideId)
-    .then(()=>{
-        res.status(200).send({status: "User deleted"});
+//     await guide.findByIdAndDelete(guideId)
+//     .then(()=>{
+//         res.status(200).send({status: "User deleted"});
 
-    }).catch((err)=>{
-        console.log(err);
-    })
+//     }).catch((err)=>{
+//         console.log(err);
+//     })
 
-})
+// })
+
+
+// Define a DELETE route at '/delete/:id'
+router.route('/delete/:id').get(function(req,res){
+    // Use the 'findByIdAndRemove' method of the 'Customer' model to delete a customer by ID
+    guide.findByIdAndRemove({_id:req.params.id}, function (err, guide){
+         // If there is an error, respond with the error message in JSON format
+        if(err)res.json(err);
+        // If the customer is successfully deleted, respond with a success message in JSON format
+        else res.json('Successfully Removed');
+    });
+});
+
+
 
 
 //Get by ID

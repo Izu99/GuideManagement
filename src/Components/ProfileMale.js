@@ -80,7 +80,7 @@ export default class ProfileMale extends Component {
 					alt=''
 					srcset=''
 				/>
-				<button type='submit'>Contact Me</button>
+				{/* <button type='submit'>Contact Me</button> */}
 			</div>
 			<table>
 
