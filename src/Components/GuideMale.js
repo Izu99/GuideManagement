@@ -5,6 +5,8 @@ import "../Styles/Header.css";
 import GuideTablecolum from "./GuideTablecolum";
 import axios from "axios";
 
+import _ from "lodash";
+
 export default class GuideMale extends Component {
 	constructor(props) {
 		super(props);
@@ -35,40 +37,41 @@ export default class GuideMale extends Component {
 	}
 
 	tabRow() {
-		return this.state.guide.map(function (object, i) {
-			return (
-				<table>
-					<tr>
-						<td key={i}>
-							<div
-								style={{ display: "flex", alignItems: "center" }}
-								className='profile-image'>
-								<div style={{ display: "flex" }}>
-									{[...Array(1)].map((_, i) => (
-										<img
-											key={i}
-											src='https://via.placeholder.com/50'
-											alt='avatar'
-											style={{
-												width: 150,
-												height: 150,
-												borderRadius: "50%",
-												marginRight: -10,
-											}}
-										/>
-									))}
-								</div>
-								<div style={{ marginLeft: 10 }}>
-									<div>{object.fullName}</div>
-									<div>{object.location}</div>
-									<button type='submit'><a href='/guidefemale'> View Profile </a></button>
-								</div>
-							</div>
-						</td>
-					</tr>
-				</table>
+		const numCols = 5;
+		const rows = [];
+
+		for (let i = 0; i < this.state.guide.length; i += numCols) {
+			const row = (
+				<div className='GuideFemale'>
+					<table>
+						<tr key={i}>
+							{this.state.guide.slice(i, i + numCols).map((object) => (
+								<td key={object.id}>
+									<div className='profile-image'>
+										<div style={{ display: "flex" }}>
+											{[...Array(1)].map((_, i) => (
+												<img
+													key={i}
+													src='https://via.placeholder.com/50'
+													alt='avatar'
+												/>
+											))}
+										</div>
+										<div>
+											<div>{object.fullName}</div>
+											<div>{object.location}</div>
+										</div>
+									</div>
+								</td>
+							))}
+						</tr>
+					</table>
+				</div>
 			);
-		});
+			rows.push(row);
+		}
+
+		return rows;
 	}
 
 	render() {
@@ -114,20 +117,12 @@ export default class GuideMale extends Component {
 				<div>
 					{" "}
 					<div className='buttons'>
-					<button type='submit'><a href='/GuideTableView'> Print </a></button>
-					<button type='submit'><a href='/guideregister'> Add Guide </a></button>
-				
+						<button type='submit'>Print</button>
+						<button type='submit'>Add Guide</button>
 					</div>
 					<table className='table'>
-						<tbody style={{ padding: 20, textAlign: "center" }}>
-							<tr>
-								<th style={{ padding: 20 }}></th>
-								{this.tabRow("fullName")}
-							</tr>
-							<tr>
-								<th style={{ padding: 20 }}></th>
-								{/* {this.tabRow('location')} */}
-							</tr>
+						<tbody>
+							<tr>{this.tabRow("fullName")}</tr>
 						</tbody>
 					</table>
 				</div>
