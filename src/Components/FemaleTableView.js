@@ -71,7 +71,7 @@ export default class FGuide extends Component {
 
 	render() {
 		return (
-			<div className='adminVehicleProfile'>
+			<div className='GuideTableView'>
 				
 				<br /> <h3 align='center'>Female Guide Management</h3>
 				<div className='row-frm'>

@@ -62,7 +62,7 @@ export default class EditFGuide extends Component {
     }
     componentDidMount() {
         // alert('edit id ' +this.props.match.params.id);
-        axios.get('http://localhost:4000/femaleGuide/edit/'+this.props.match.params.id)
+        axios.get('http://localhost:8090/femaleGuide/edit/'+this.props.match.params.id)
             .then(res => {
                 this.setState({
                     fullName: res.data.fullName,
@@ -96,7 +96,7 @@ export default class EditFGuide extends Component {
         };
 
                     if(this.state.contactNo.length === 10){
-                        axios.post("http://localhost:8090/femaleGuide/Update/"+this.props.match.params.id,obj)
+                        axios.post("http://localhost:8090/femaleGuide/update/"+this.props.match.params.id,obj)
                                 .then(res => {
                                     alert("add Successfully");
                                     this.setState({
@@ -110,9 +110,9 @@ export default class EditFGuide extends Component {
                             
                                     })
                                     console.log(res.data)});
-                            this.props.history.push('/HomePage');
+                            this.props.history.push('/FemaleTableView');
                       
-					  window.location.replace('/HomePage');
+					  window.location.replace('/FemaleTableView');
                         
                     } 
                     else {
@@ -209,9 +209,7 @@ export default class EditFGuide extends Component {
 
 					</div>
 				
-					<button type='submit'>
-						<Link to='/homepage'>add</Link>
-					</button>
+					<button className='submit' type='submit'>Update  </button>
 				</form>
 			</div>
 		);

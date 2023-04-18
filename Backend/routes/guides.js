@@ -37,27 +37,58 @@ router.route("/").get((req,res)=>{
 })
 
 
-//update data of the databas
-router.route("/update/:id").put(async(req,res)=>{
-    let guideId = req.params.id;
-    const {fullName,location,languages,description,contactNo,Email} = req.body;
+// //update data of the databas
+// router.route("/update/:id").put(async(req,res)=>{
+//     let guideId = req.params.id;
+//     const {fullName,location,languages,description,contactNo,Email} = req.body;
 
-    const updateDetails = {
-        fullName,
-        location,
-        languages,
-        description,
-        contactNo,
-        Email
-    }
-    const update = await guide.findByIdAndUpdate(guideId,updateDetails)
-    .then(()=>{
-        res.status(200).send({ status : "guide updated "})
-    }).catch((err)=>{
-        console.log(err);
-    })
+//     const updateDetails = {
+//         fullName,
+//         location,
+//         languages,
+//         description,
+//         contactNo,
+//         Email
+//     }
+//     const update = await guide.findByIdAndUpdate(guideId,updateDetails)
+//     .then(()=>{
+//         res.status(200).send({ status : "guide updated "})
+//     }).catch((err)=>{
+//         console.log(err);
+//     })
 
-})
+// })
+
+// Define a route for updating a customer with a given id
+router.route('/update/:id').post(function (req,res){
+    // Get the id parameter from the request URL
+    let id = req.params.id;
+    // Find the customer with the given id in the database
+    guide.findById(id, function (err, guide){
+        if(!guide)
+         // If no guide was found with the given id, return a 404 error
+            res.status(404).send("Data is not found??");
+        else{
+             // Update the guide's fields with the new data from the request body
+            guide.fullName = req.body.fullName;
+            guide.location = req.body.location;
+            guide.languages = req.body.languages;
+            guide.description = req.body.description;
+            guide.contactNo = req.body.contactNo;
+            guide.Email = req.body.Email;
+       // Save the updated guide to the database
+            guide.save().then(business => {
+                // If the customer was updated successfully, return a success message
+                res.json('Update Complete');
+            })
+                .catch(err =>{
+                    // If there was an error updating the customer, return an error message
+                    res.status(400).send("Unable to update data");
+                });
+        }
+    });
+});
+
 
 
 // //deleting data from the database
@@ -106,9 +137,9 @@ router.route("/get/:id").get(async (req, res) => {
 
 
 //get all details
-// Define a route for getting all customers
+// Define a route for getting all guide
 router.route('/getall').get(function(req, res) {
-    // Find all documents in the 'Customer' collection
+    // Find all documents in the 'guide' collection
     guide.find(function(err, vehicle) {
         if (err) {
             // If there was an error finding customers, log the error to the console

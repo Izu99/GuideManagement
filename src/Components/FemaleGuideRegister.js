@@ -93,9 +93,9 @@ export default class FGuideRegister extends Component {
                             
                                     })
                                     console.log(res.data)});
-                            this.props.history.push('/HomePage');
+                            this.props.history.push('/guidefemale');
                       
-					  window.location.replace('/HomePage');
+					  window.location.replace('/guidefemale');
                         
                     } 
                     else {
@@ -111,7 +111,7 @@ export default class FGuideRegister extends Component {
 		return (
 			<div className='GuideRegister'>
 				<form onSubmit={this.onSubmit}>
-					<h2>Update Account</h2>
+					<h2>ADD Account</h2>
 					<div className='form-row name'>
 						<div className='form-group'>
 							<p className="form-control">Guide's Full Name</p>

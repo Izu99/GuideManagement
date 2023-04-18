@@ -10,12 +10,12 @@ class GtableRow extends Component {
         this.delete = this.delete.bind(this);
     }
     delete(){
-        axios.get('http://localhost:4000/femaleGuide/delete/'+this.props.obj._id)
+        axios.get('http://localhost:8090/femaleGuide/delete/'+this.props.obj._id)
             .then(this.setState({redirect: true}))
             .catch(err => console.log(err))
         //this.props.history.push('/index');
         alert(" Successfully Deleted....")
-        window.location.replace('/GuideTableView');
+        window.location.replace('/FemaleTableView');
     }
     render() {
         return (
@@ -40,9 +40,11 @@ class GtableRow extends Component {
                    {this.props.obj.Email}
                </td>
                <td className='profile-actions'>
-
-                  &nbsp;
-                   {/* <button onClick={this.delete} className="btn btn-danger">Delete</button> */}
+               <button className='btn'>
+								<Link to={'/EditFguide/' + this.props.obj._id}>Edit</Link>
+							</button>
+                 &nbsp;
+                   <button onClick={this.delete} className="btn btn-danger">Delete</button>
                </td>
            </tr>
         );

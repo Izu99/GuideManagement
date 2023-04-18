@@ -40,7 +40,9 @@ class GtableRow extends Component {
                    {this.props.obj.Email}
                </td>
                <td className='profile-actions'>
-
+               <button className='btn'>
+								<Link to={'/EditGuide/' + this.props.obj._id}>Edit</Link>
+							</button>
                  &nbsp;
                    <button onClick={this.delete} className="btn btn-danger">Delete</button>
                </td>
