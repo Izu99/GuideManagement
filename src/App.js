@@ -39,7 +39,7 @@ class App extends Component {
 						<Route path='/EditFguide/:id' component={EditFguide} />
 						<Route path='/EditGuide/:id' component={EditGuide} />
 						<Route path='/ProfileFemale' component={ProfileFemale} />
-						<Route path='/ProfileMale/:id' component={ProfileMale} />
+						<Route path='/ProfileMale' component={ProfileMale} />
 						<Redirect to={HomePage} />
 					</Switch>
 				</Router>
