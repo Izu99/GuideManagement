@@ -31,11 +31,12 @@
 .homepage-Image button {
     margin-left: 16rem;
     width: 16rem;
-	height: 2.5rem;
+	height: 2.8rem;
 	background-color: #ffffff;
 	border: none;
 	border-radius: 30px;
 	transition: 0.3 ease all;
+	font-size: 1.01rem;
 }
 
 .homepage-Image button:hover {
